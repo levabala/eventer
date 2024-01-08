@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import type React from 'react';
+import { useState } from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from './types';
+import type { RootStackParamList } from './types';
 import { View } from 'react-native';
-import { EventRecord } from '../entities/event/eventRecord';
+import type { EventRecord } from '../entities/event/eventRecord';
 import { EventList } from '../components/EventList';
 import { useBoolean } from 'usehooks-ts';
 import { EventCreateDialog } from '../components/EventCreateDialog';

@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react-native';
-import { Button, ButtonProps } from './Button';
+import type { Meta, StoryObj } from '@storybook/react-native';
+import type { ButtonProps } from './Button';
+import { Button } from './Button';
 
 const meta: Meta = {
     title: 'Button',

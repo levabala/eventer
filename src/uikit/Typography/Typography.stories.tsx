@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react-native';
-import { Typography, TypographyProps } from './Typography';
+import type { Meta, StoryObj } from '@storybook/react-native';
+import type { TypographyProps } from './Typography';
+import { Typography } from './Typography';
 import { View } from 'react-native';
 
 const meta: Meta = {

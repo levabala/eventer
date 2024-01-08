@@ -3,4 +3,5 @@
     "compilerOptions": {
         "typeRoots": ["./src/types"]
     }
+    // "include": ["src/**/*", ".eslintrc.js"]
 }

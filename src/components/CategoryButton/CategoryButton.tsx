@@ -1,5 +1,5 @@
 import { TouchableHighlight, View } from 'react-native';
-import { EventCategory } from '../../entities/event/eventCategory';
+import type { EventCategory } from '../../entities/event/eventCategory';
 import { Typography } from '../../uikit/Typography';
 import { useTheme } from '@react-navigation/native';
 
@@ -25,7 +25,8 @@ export const CategoryButton: React.FC<CategoryButtonProps> = ({
                     width: 40,
                     height: 40,
                     opacity: category ? undefined : theme.opacities.faded,
-                }}>
+                }}
+            >
                 <Typography>
                     {category ? category[0].toUpperCase() : '?'}
                 </Typography>

@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import { EventRecord } from '../../entities/event/eventRecord';
+import type { EventRecord } from '../../entities/event/eventRecord';
 import { Typography } from '../../uikit/Typography';
 import DatePicker from 'react-native-date-picker';
 import { Button } from '../../uikit/Button';
@@ -22,11 +22,11 @@ const Row: React.FC<React.PropsWithChildren> = ({ children }) => (
     </View>
 );
 
-type EventRecordWithoutId = Omit<EventRecord, 'id'>;
+type EventRecordPayload = Omit<EventRecord, 'id' | 'owner'>;
 
 export type EventCreateDialogProps = {
-    eventRecordDefault?: Partial<EventRecordWithoutId>;
-    onSubmit: (eventRecord: EventRecordWithoutId) => void;
+    eventRecordDefault?: Partial<EventRecordPayload>;
+    onSubmit: (eventRecord: EventRecordPayload) => void;
     onAbort: () => void;
 };
 
@@ -35,9 +35,8 @@ export const EventCreateDialog: React.FC<EventCreateDialogProps> = ({
     onSubmit,
     onAbort,
 }) => {
-
     const { handleSubmit, handleChange, values, setFieldValue } =
-        useFormik<EventRecordWithoutId>({
+        useFormik<EventRecordPayload>({
             initialValues: {
                 date: new Date(),
                 name: null,
@@ -72,7 +71,7 @@ export const EventCreateDialog: React.FC<EventCreateDialogProps> = ({
                         date={values.date}
                         onConfirm={date => {
                             closeDatePicker();
-                            setFieldValue('date', date);
+                            void setFieldValue('date', date);
                         }}
                         onCancel={closeDatePicker}
                     />

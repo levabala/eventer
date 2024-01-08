@@ -1,20 +1,24 @@
+import type { ModalProps as ModalOriginalProps, ViewProps } from 'react-native';
 import {
     Modal as ModalOriginal,
-    ModalProps as ModalOriginalProps,
     TouchableOpacity,
     TouchableWithoutFeedback,
     View,
-    ViewProps,
 } from 'react-native';
 import { useTheme } from '@react-navigation/native';
 import { Typography } from '../Typography';
 
 export type ModalProps = Omit<ModalOriginalProps, 'style'> &
     React.PropsWithChildren & {
-    onPress?: () => void;
-};
+        onPress?: () => void;
+    };
 
-const ModalFrame = ({ onPress, onRequestClose, children, ...props }: ModalProps) => {
+const ModalFrame = ({
+    onPress,
+    onRequestClose,
+    children,
+    ...props
+}: ModalProps) => {
     const theme = useTheme();
 
     return (
@@ -30,7 +34,10 @@ const ModalFrame = ({ onPress, onRequestClose, children, ...props }: ModalProps)
                     activeOpacity={1}
                     onPressOut={onRequestClose}
                 >
-                    <TouchableWithoutFeedback onPress={onPress} accessible={false}>
+                    <TouchableWithoutFeedback
+                        onPress={onPress}
+                        accessible={false}
+                    >
                         <View
                             style={{
                                 display: 'flex',

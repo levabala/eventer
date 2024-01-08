@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
+import type React from 'react';
+import { useMemo } from 'react';
 
 import { FlatList, View } from 'react-native';
-import { EventRecord } from '../../entities/event/eventRecord';
+import type { EventRecord } from '../../entities/event/eventRecord';
 import { useTheme } from '@react-navigation/native';
 import { Typography } from '../../uikit/Typography';
 import { CategoryButton } from '../CategoryButton';

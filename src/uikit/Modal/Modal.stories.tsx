@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react-native';
-import { Modal, ModalProps } from './Modal';
+import type { Meta, StoryObj } from '@storybook/react-native';
+import type { ModalProps } from './Modal';
+import { Modal } from './Modal';
 import { Button } from '../Button';
 import { useBoolean } from 'usehooks-ts';
 import { View } from 'react-native';

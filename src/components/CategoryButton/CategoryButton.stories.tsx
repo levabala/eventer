@@ -1,6 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react-native';
-import { EventCategory } from '../../entities/event/eventCategory';
-import { CategoryButton, CategoryButtonProps } from './CategoryButton';
+import type { Meta, StoryObj } from '@storybook/react-native';
+import type { EventCategory } from '../../entities/event/eventCategory';
+import type { CategoryButtonProps } from './CategoryButton';
+import { CategoryButton } from './CategoryButton';
 
 const meta: Meta = {
     title: 'CategoryButton',

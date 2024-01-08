@@ -1,4 +1,4 @@
-import { ThemeExtended } from './themes';
+import type { ThemeExtended } from './themes';
 import { useTheme } from '@react-navigation/native';
 
 type StylesCreator<T> = (theme: ThemeExtended) => T;
@@ -17,13 +17,16 @@ function getOrCreateStylesMapper<T>(
         return mapperCached as Map<StylesCreator<T>, T>;
     }
 
-    const mapper = new Map();
+    const mapper = new Map<StylesCreator<T>, T>();
     themeToCreatorToStyles.set(theme, mapper);
 
     return mapper;
 }
 
-function getOrCreateStyles<T>(theme: ThemeExtended, creator: StylesCreator<T>): T {
+function getOrCreateStyles<T>(
+    theme: ThemeExtended,
+    creator: StylesCreator<T>,
+): T {
     const mapperStyles = getOrCreateStylesMapper<T>(theme);
 
     const stylesCached = mapperStyles.get(creator);

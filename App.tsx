@@ -7,10 +7,9 @@
 
 import { STORYBOOK_ON } from '@env';
 
-import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MainPage } from './src/pages/MainPage';
-import { RootStackParamList } from './src/pages/types';
+import type { RootStackParamList } from './src/pages/types';
 
 import Storybook from './.storybook';
 import { NavigationContainerThemed } from './src/theme/NavigationContainerThemed';

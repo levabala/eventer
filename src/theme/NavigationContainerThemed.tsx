@@ -1,6 +1,7 @@
-import React from 'react';
+import type React from 'react';
 
-import { NavigationContainer, Theme } from '@react-navigation/native';
+import type { Theme } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import { ThemeDark, ThemeLight } from './themes';
 

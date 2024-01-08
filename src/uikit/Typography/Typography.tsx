@@ -1,7 +1,7 @@
-import React from 'react';
+import type React from 'react';
 
 import { StyleSheet, Text } from 'react-native';
-import { ThemeExtended } from '../../theme/themes';
+import type { ThemeExtended } from '../../theme/themes';
 import { useStyleSheetThemed } from '../../theme/styleSheetThemed';
 
 export type TypographyVariant = 'body' | 'header' | 'subheader';
