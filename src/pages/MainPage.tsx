@@ -6,7 +6,9 @@ import { View } from 'react-native';
 import { useBoolean } from 'usehooks-ts';
 import { EventCreateDialog } from '../components/EventCreateDialog';
 import { EventList } from '../components/EventList';
+import type { EventId } from '../entities/event/eventCategory';
 import type { EventRecord } from '../entities/event/eventRecord';
+import type { UserId } from '../entities/user/user';
 import { Button } from '../uikit/Button';
 import { Space } from '../uikit/Space';
 import type { RootStackParamList } from './types';
@@ -28,7 +30,11 @@ export const MainPage: React.FC<MainPageProps> = () => {
                     onSubmit={eventNew => {
                         setEventList(arr => [
                             ...arr,
-                            { id: uuid.v4(), ...eventNew },
+                            {
+                                id: uuid.v4() as EventId,
+                                owner: 'test user' as UserId,
+                                ...eventNew,
+                            },
                         ]);
 
                         close();

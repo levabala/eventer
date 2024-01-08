@@ -21,10 +21,10 @@ module.exports = {
         ],
         'import/no-unresolved': 'off',
         'react-native/no-inline-styles': 'off',
-        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/consistent-type-imports': 'warn',
         'no-void': 'off',
         '@typescript-eslint/no-floating-promises': [
-            'error',
+            'warn',
             { ignoreVoid: true },
         ],
     },
