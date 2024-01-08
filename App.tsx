@@ -8,10 +8,10 @@
 import { STORYBOOK_ON } from '@env';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Storybook from './.storybook';
 import { MainPage } from './src/pages/MainPage';
 import type { RootStackParamList } from './src/pages/types';
 
-import Storybook from './.storybook';
 import { NavigationContainerThemed } from './src/theme/NavigationContainerThemed';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

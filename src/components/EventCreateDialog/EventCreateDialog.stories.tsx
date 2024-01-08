@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-native';
-import type { EventCreateDialogProps } from './EventCreateDialog';
-import { EventCreateDialog } from './EventCreateDialog';
 import { useBoolean } from 'usehooks-ts';
 import { Button } from '../../uikit/Button';
 import { Space } from '../../uikit/Space';
+import { EventCreateDialog } from './EventCreateDialog';
+import type { EventCreateDialogProps } from './EventCreateDialog';
 
 const meta: Meta = {
     title: 'EventCreateDialog',

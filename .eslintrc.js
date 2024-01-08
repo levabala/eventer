@@ -5,6 +5,9 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/jsx-runtime',
         'plugin:@typescript-eslint/strict-type-checked',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
+        'plugin:import/warnings',
     ],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
@@ -12,6 +15,11 @@ module.exports = {
         project: './tsconfig.json',
     },
     rules: {
+        'import/order': [
+            'warn',
+            { alphabetize: { order: 'asc', caseInsensitive: true } },
+        ],
+        'import/no-unresolved': 'off',
         'react-native/no-inline-styles': 'off',
         '@typescript-eslint/consistent-type-imports': 'error',
         'no-void': 'off',
@@ -29,4 +37,11 @@ module.exports = {
             },
         },
     ],
+    settings: {
+        'import/resolver': {
+            typescript: {
+                project: './tsconfig.json',
+            },
+        },
+    },
 };

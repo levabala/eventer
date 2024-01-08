@@ -1,8 +1,8 @@
 import type React from 'react';
 
 import { StyleSheet, Text } from 'react-native';
-import type { ThemeExtended } from '../../theme/themes';
 import { useStyleSheetThemed } from '../../theme/styleSheetThemed';
+import type { ThemeExtended } from '../../theme/themes';
 
 export type TypographyVariant = 'body' | 'header' | 'subheader';
 export type TypographyColor = 'primary' | 'secondary';

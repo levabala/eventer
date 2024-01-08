@@ -1,3 +1,4 @@
+import { useTheme } from '@react-navigation/native';
 import type { ModalProps as ModalOriginalProps, ViewProps } from 'react-native';
 import {
     Modal as ModalOriginal,
@@ -5,7 +6,6 @@ import {
     TouchableWithoutFeedback,
     View,
 } from 'react-native';
-import { useTheme } from '@react-navigation/native';
 import { Typography } from '../Typography';
 
 export type ModalProps = Omit<ModalOriginalProps, 'style'> &

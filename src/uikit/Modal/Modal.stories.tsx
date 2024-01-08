@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-native';
+import { View } from 'react-native';
+import { times } from 'remeda';
+import { useBoolean } from 'usehooks-ts';
+import { Button } from '../Button';
+import { Typography } from '../Typography';
 import type { ModalProps } from './Modal';
 import { Modal } from './Modal';
-import { Button } from '../Button';
-import { useBoolean } from 'usehooks-ts';
-import { View } from 'react-native';
-import { Typography } from '../Typography';
-import { times } from 'remeda';
 
 const meta: Meta = {
     title: 'Modal',

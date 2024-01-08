@@ -1,5 +1,5 @@
-import type { ThemeExtended } from './themes';
 import { useTheme } from '@react-navigation/native';
+import type { ThemeExtended } from './themes';
 
 type StylesCreator<T> = (theme: ThemeExtended) => T;
 

@@ -1,12 +1,12 @@
 import { useFormik } from 'formik';
-import type { EventRecord } from '../../entities/event/eventRecord';
-import { Typography } from '../../uikit/Typography';
-import DatePicker from 'react-native-date-picker';
-import { Button } from '../../uikit/Button';
-import { useBoolean } from 'usehooks-ts';
 import { Keyboard, Pressable, TextInput, View } from 'react-native';
-import { formatDateShort } from '../../utils/formatDateShort';
+import DatePicker from 'react-native-date-picker';
+import { useBoolean } from 'usehooks-ts';
+import type { EventRecord } from '../../entities/event/eventRecord';
+import { Button } from '../../uikit/Button';
 import { Modal } from '../../uikit/Modal';
+import { Typography } from '../../uikit/Typography';
+import { formatDateShort } from '../../utils/formatDateShort';
 import { CategoryButton } from '../CategoryButton';
 
 const Row: React.FC<React.PropsWithChildren> = ({ children }) => (

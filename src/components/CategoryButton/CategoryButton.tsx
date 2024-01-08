@@ -1,7 +1,7 @@
+import { useTheme } from '@react-navigation/native';
 import { TouchableHighlight, View } from 'react-native';
 import type { EventCategory } from '../../entities/event/eventCategory';
 import { Typography } from '../../uikit/Typography';
-import { useTheme } from '@react-navigation/native';
 
 export type CategoryButtonProps = {
     category: EventCategory | null;

@@ -1,14 +1,13 @@
+import { useTheme } from '@react-navigation/native';
 import type React from 'react';
 import { useMemo } from 'react';
 
 import { FlatList, View } from 'react-native';
-import type { EventRecord } from '../../entities/event/eventRecord';
-import { useTheme } from '@react-navigation/native';
-import { Typography } from '../../uikit/Typography';
-import { CategoryButton } from '../CategoryButton';
 import { sortBy } from 'remeda';
-
+import type { EventRecord } from '../../entities/event/eventRecord';
+import { Typography } from '../../uikit/Typography';
 import { formatDateShort } from '../../utils/formatDateShort';
+import { CategoryButton } from '../CategoryButton';
 
 export type EventListProps = {
     eventList: EventRecord[];

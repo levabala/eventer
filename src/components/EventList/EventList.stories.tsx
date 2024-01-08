@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-native';
+import type { EventCategory } from '../../entities/event/eventCategory';
 import type { EventListProps } from './EventList';
 import { EventList } from './EventList';
-import type { EventCategory } from '../../entities/event/eventCategory';
 
 const meta: Meta = {
     title: 'EventList',

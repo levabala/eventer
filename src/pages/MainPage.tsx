@@ -1,15 +1,15 @@
+import uuid from '@levabala/react-native-uuid';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type React from 'react';
 import { useState } from 'react';
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import type { RootStackParamList } from './types';
 import { View } from 'react-native';
-import type { EventRecord } from '../entities/event/eventRecord';
-import { EventList } from '../components/EventList';
 import { useBoolean } from 'usehooks-ts';
 import { EventCreateDialog } from '../components/EventCreateDialog';
-import uuid from '@levabala/react-native-uuid';
+import { EventList } from '../components/EventList';
+import type { EventRecord } from '../entities/event/eventRecord';
 import { Button } from '../uikit/Button';
 import { Space } from '../uikit/Space';
+import type { RootStackParamList } from './types';
 
 export type MainPageProps = NativeStackScreenProps<RootStackParamList, 'Main'>;
 

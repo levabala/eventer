@@ -1,7 +1,6 @@
-import type React from 'react';
-
 import type { Theme } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
+import type React from 'react';
 import { useColorScheme } from 'react-native';
 import { ThemeDark, ThemeLight } from './themes';
 

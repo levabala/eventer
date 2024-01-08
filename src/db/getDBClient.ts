@@ -1,10 +1,9 @@
 import 'react-native-url-polyfill/auto';
 
 import { SUPABASE_API_KEY, SUPABASE_DB_URL } from '@env';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './supabase.gen';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 let dbClient: ReturnType<typeof createClient<Database>> | null = null;
 
